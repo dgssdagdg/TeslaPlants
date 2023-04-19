@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header id="ex1" class="header">
             <div class="container">
                 <div class="header-row">
                     <div class="header-left">
@@ -77,7 +77,7 @@
             </a>
         </div>
         <main class="main">
-            <section id="ex1" class="intro">
+            <section class="intro">
                 <div class="container-right">
                     <div class="intro-row">
                         <div class="intro-body">
@@ -579,5 +579,65 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script type="text/javascript">
+        const swiper = new Swiper('.intro-sliders', {
+    loop: true,
+    speed: 800,
+    spaceBetween: 30,
+    pagination: {
+    el: '.intro-pagination',
+    clickable: true,
+    },
+    navigation: {
+    nextEl: '.intro-button-next',
+    prevEl: '.intro-button-prev',
+    },
+});
+const swiperCatalog = new Swiper('.catalog-sliders', {
+    loop: true,
+    speed: 800,
+    spaceBetween: 30,
+    navigation: {
+    nextEl: '.catalog-button-next',
+    prevEl: '.catalog-button-prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        992: {
+            slidesPerView: 4,
+        },
+    }
+});
+const swiperReviews = new Swiper('.reviews-sliders', {
+    loop: true,
+    speed: 800,
+    
+    spaceBetween: 30,
+    navigation: {
+    nextEl: '.reviews-button-next',
+    prevEl: '.reviews-button-prev',
+    },
+    pagination: {
+        el: '.reviews-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+        slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        }
+    }
+});
+    </script>
 </body>
 </html>
