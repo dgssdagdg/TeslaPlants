@@ -547,7 +547,7 @@ body {
   }
   .intro-img img {
     width: 100%;
-    height: 500px;
+    height: auto;
   }
   .intro-row {
     padding: 0 15px;
@@ -598,7 +598,7 @@ body {
     height: 50px;
   }
   .intro-img img {
-    height: 250px;
+    height: auto;
   }
   .intro-boxs {
     -ms-flex-wrap: wrap;
