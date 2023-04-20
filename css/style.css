@@ -510,10 +510,14 @@ body {
   display: -ms-inline-flexbox;
   display: inline-flex;
   opacity: 1;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .swiper-pagination-bullet-active {
   background: #8E9CAA;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .intro-body-img {
