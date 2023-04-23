@@ -476,11 +476,23 @@ body {
   margin-top: 86px;
 }
 
-.intro-pagination {
+.pagination {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: auto !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 7px;
+}
+
+.intro-pagination {
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
@@ -789,7 +801,7 @@ body {
   position: absolute;
   top: 45%;
   z-index: 1;
-  width: 70px;
+  min-width: 70px;
   height: 70px;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -854,7 +866,56 @@ body {
   background: #76C183;
 }
 
+.catalog-pagination {
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 7px;
+}
+
+@media (max-width: 1500px) {
+  .catalog-button-prev {
+    left: -70px;
+  }
+  .catalog-button-next {
+    right: -70px;
+  }
+}
+@media (max-width: 1200px) {
+  .catalog .intro-sliders-navigation {
+    margin-top: 10px;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .catalog-button-prev,
+.catalog-button-next {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+  .catalog-pagination {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    width: auto !important;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+}
 @media (max-width: 767px) {
+  .catalog-pagination {
+    -webkit-column-gap: 7px;
+       -moz-column-gap: 7px;
+            column-gap: 7px;
+  }
+  .catalog-button-prev,
+.catalog-button-next {
+    min-width: 50px;
+    height: 50px;
+  }
   .catalog {
     padding: 40px 0;
   }
@@ -1121,9 +1182,18 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 7px;
 }
 
 @media (max-width: 1300px) {
+  .reviews .intro-sliders-navigation {
+    margin-top: 10px;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
   .reviews-button-prev,
 .reviews-button-next {
     display: none;
